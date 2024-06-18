@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة واتساب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        
+        .container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container h2 span {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        .container h2 img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            <span>مجموعة واتساب</span>
+        </h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="last-name">الإسم العائلي</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="first-name">الإسم الشخصي</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">الإنضمام للمجموعة</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // الحصول على قيم الحقول
+            var lastName = document.getElementById('last-name').value;
+            var firstName = document.getElementById('first-name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            // عرض القيم في وحدة التحكم
+            console.log("الإسم العائلي:", lastName);
+            console.log("الإسم الشخصي:", firstName);
+            console.log("البريد الإلكتروني:", email);
+            console.log("رقم الهاتف:", phone);
+
+            // إعداد رابط مجموعة WhatsApp
+            var whatsappGroupLink = 'https://chat.whatsapp.com/CTYWPxPf0xCA8ViMWeuYLc'; // ضع رابط مجموعة واتساب هنا
+
+            // الانتقال إلى رابط مجموعة WhatsApp
+            window.location.href = whatsappGroupLink;
+        });
+    </script>
+</body>
+
+</html>
